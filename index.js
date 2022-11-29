@@ -176,7 +176,7 @@ function ComputerMove() {
     if (gameState[i].filled == 3) {
       console.log("there were 3 lines available, about to make bestMove");
       bestMove(i); //called when there is a winning line available
-      checkedFilled(i);
+      // checkedFilled(i);
     }
   }
   // checkedFilled()
@@ -211,9 +211,10 @@ function ComputerMove() {
       
       console.log("calling random");
       const randomIndex = Math.floor(Math.random() * boxNotFilled.length+1);
-      checkedFilled(boxNotFilled[randomIndex]);
+      // checkedFilled(boxNotFilled[randomIndex]);
       console.log("random index " + boxNotFilled[randomIndex]);
       randomMove(boxNotFilled[randomIndex]);
+      checkedFilled(boxNotFilled[randomIndex]);
       return;
     // }
   }
